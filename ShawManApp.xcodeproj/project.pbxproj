@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05D2A154FA33778D6EB484A8 /* Pods_ShawManApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD45328F5C5B5F8AA4152FF /* Pods_ShawManApp.framework */; };
+		253F6145A1C077212ADE418B /* Pods_ShawManAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB02F71C4B8FBBA8B8A9415 /* Pods_ShawManAppTests.framework */; };
 		49DEF4E525E6B41900418D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DEF4E425E6B41900418D72 /* AppDelegate.swift */; };
 		49DEF4E725E6B41900418D72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DEF4E625E6B41900418D72 /* SceneDelegate.swift */; };
 		49DEF4E925E6B41900418D72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DEF4E825E6B41900418D72 /* ViewController.swift */; };
@@ -15,6 +17,12 @@
 		49DEF4F125E6B41C00418D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DEF4EF25E6B41C00418D72 /* LaunchScreen.storyboard */; };
 		49DEF4FC25E6B41D00418D72 /* ShawManAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DEF4FB25E6B41D00418D72 /* ShawManAppTests.swift */; };
 		49DEF50725E6B41D00418D72 /* ShawManAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DEF50625E6B41D00418D72 /* ShawManAppUITests.swift */; };
+		49DEF52E25E6B53300418D72 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DEF52D25E6B53300418D72 /* APIManager.swift */; };
+		49DEF53325E6BA5900418D72 /* FormatedAddressResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DEF53225E6BA5900418D72 /* FormatedAddressResponse.swift */; };
+		49DEF53825E6BAE600418D72 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DEF53725E6BAE500418D72 /* BaseVC.swift */; };
+		49DEF54525E6BE3D00418D72 /* RestaurantDetailsByFilterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DEF54425E6BE3C00418D72 /* RestaurantDetailsByFilterResponse.swift */; };
+		49DEF54A25E6C29F00418D72 /* SingleRestaurantDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DEF54925E6C29F00418D72 /* SingleRestaurantDetailResponse.swift */; };
+		CD2830B11FDC13EAA214F62E /* Pods_ShawManApp_ShawManAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472A80B781658AF9F9539EBA /* Pods_ShawManApp_ShawManAppUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F3F3410DCB60DC4F05DB82B /* Pods-ShawManApp-ShawManAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShawManApp-ShawManAppUITests.release.xcconfig"; path = "Target Support Files/Pods-ShawManApp-ShawManAppUITests/Pods-ShawManApp-ShawManAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1215801F5B63413DB3BD744B /* Pods-ShawManApp-ShawManAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShawManApp-ShawManAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ShawManApp-ShawManAppUITests/Pods-ShawManApp-ShawManAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3CAEB1E702C71EDD537C0D3D /* Pods-ShawManApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShawManApp.release.xcconfig"; path = "Target Support Files/Pods-ShawManApp/Pods-ShawManApp.release.xcconfig"; sourceTree = "<group>"; };
+		472A80B781658AF9F9539EBA /* Pods_ShawManApp_ShawManAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShawManApp_ShawManAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DEF4E125E6B41900418D72 /* ShawManApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShawManApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DEF4E425E6B41900418D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49DEF4E625E6B41900418D72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +61,16 @@
 		49DEF50225E6B41D00418D72 /* ShawManAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShawManAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DEF50625E6B41D00418D72 /* ShawManAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShawManAppUITests.swift; sourceTree = "<group>"; };
 		49DEF50825E6B41D00418D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49DEF52D25E6B53300418D72 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		49DEF53225E6BA5900418D72 /* FormatedAddressResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatedAddressResponse.swift; sourceTree = "<group>"; };
+		49DEF53725E6BAE500418D72 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		49DEF54425E6BE3C00418D72 /* RestaurantDetailsByFilterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsByFilterResponse.swift; sourceTree = "<group>"; };
+		49DEF54925E6C29F00418D72 /* SingleRestaurantDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRestaurantDetailResponse.swift; sourceTree = "<group>"; };
+		530316434857810BA6D5BA27 /* Pods-ShawManAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShawManAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ShawManAppTests/Pods-ShawManAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		87E3E0BF43FB168A0723AC10 /* Pods-ShawManAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShawManAppTests.release.xcconfig"; path = "Target Support Files/Pods-ShawManAppTests/Pods-ShawManAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		93F1EE826AF6EF1832A1480F /* Pods-ShawManApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShawManApp.debug.xcconfig"; path = "Target Support Files/Pods-ShawManApp/Pods-ShawManApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CBB02F71C4B8FBBA8B8A9415 /* Pods_ShawManAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShawManAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD45328F5C5B5F8AA4152FF /* Pods_ShawManApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShawManApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D2A154FA33778D6EB484A8 /* Pods_ShawManApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				253F6145A1C077212ADE418B /* Pods_ShawManAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD2830B11FDC13EAA214F62E /* Pods_ShawManApp_ShawManAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +108,8 @@
 				49DEF4FA25E6B41D00418D72 /* ShawManAppTests */,
 				49DEF50525E6B41D00418D72 /* ShawManAppUITests */,
 				49DEF4E225E6B41900418D72 /* Products */,
+				903A4737E7D58C0F1B8C2801 /* Pods */,
+				C2AF41EBFB13EDEB76D039E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +129,10 @@
 				49DEF4E425E6B41900418D72 /* AppDelegate.swift */,
 				49DEF4E625E6B41900418D72 /* SceneDelegate.swift */,
 				49DEF4E825E6B41900418D72 /* ViewController.swift */,
+				49DEF53725E6BAE500418D72 /* BaseVC.swift */,
+				49DEF52C25E6B52000418D72 /* Model */,
+				49DEF52825E6B51000418D72 /* Utlity */,
+				49DEF52125E6B50600418D72 /* Controller */,
 				49DEF4EA25E6B41900418D72 /* Main.storyboard */,
 				49DEF4ED25E6B41C00418D72 /* Assets.xcassets */,
 				49DEF4EF25E6B41C00418D72 /* LaunchScreen.storyboard */,
@@ -128,6 +159,54 @@
 			path = ShawManAppUITests;
 			sourceTree = "<group>";
 		};
+		49DEF52125E6B50600418D72 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		49DEF52825E6B51000418D72 /* Utlity */ = {
+			isa = PBXGroup;
+			children = (
+				49DEF52D25E6B53300418D72 /* APIManager.swift */,
+			);
+			path = Utlity;
+			sourceTree = "<group>";
+		};
+		49DEF52C25E6B52000418D72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				49DEF53225E6BA5900418D72 /* FormatedAddressResponse.swift */,
+				49DEF54425E6BE3C00418D72 /* RestaurantDetailsByFilterResponse.swift */,
+				49DEF54925E6C29F00418D72 /* SingleRestaurantDetailResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		903A4737E7D58C0F1B8C2801 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93F1EE826AF6EF1832A1480F /* Pods-ShawManApp.debug.xcconfig */,
+				3CAEB1E702C71EDD537C0D3D /* Pods-ShawManApp.release.xcconfig */,
+				1215801F5B63413DB3BD744B /* Pods-ShawManApp-ShawManAppUITests.debug.xcconfig */,
+				0F3F3410DCB60DC4F05DB82B /* Pods-ShawManApp-ShawManAppUITests.release.xcconfig */,
+				530316434857810BA6D5BA27 /* Pods-ShawManAppTests.debug.xcconfig */,
+				87E3E0BF43FB168A0723AC10 /* Pods-ShawManAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C2AF41EBFB13EDEB76D039E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECD45328F5C5B5F8AA4152FF /* Pods_ShawManApp.framework */,
+				472A80B781658AF9F9539EBA /* Pods_ShawManApp_ShawManAppUITests.framework */,
+				CBB02F71C4B8FBBA8B8A9415 /* Pods_ShawManAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49DEF50B25E6B41D00418D72 /* Build configuration list for PBXNativeTarget "ShawManApp" */;
 			buildPhases = (
+				FB97108B67C5111806B6A59D /* [CP] Check Pods Manifest.lock */,
 				49DEF4DD25E6B41900418D72 /* Sources */,
 				49DEF4DE25E6B41900418D72 /* Frameworks */,
 				49DEF4DF25E6B41900418D72 /* Resources */,
+				C6084070254BA88AE63F4AE8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +233,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49DEF50E25E6B41D00418D72 /* Build configuration list for PBXNativeTarget "ShawManAppTests" */;
 			buildPhases = (
+				E32FAFCB59D63F193C9AED6B /* [CP] Check Pods Manifest.lock */,
 				49DEF4F325E6B41D00418D72 /* Sources */,
 				49DEF4F425E6B41D00418D72 /* Frameworks */,
 				49DEF4F525E6B41D00418D72 /* Resources */,
@@ -170,9 +252,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49DEF51125E6B41D00418D72 /* Build configuration list for PBXNativeTarget "ShawManAppUITests" */;
 			buildPhases = (
+				61CACFD71CC2084594571679 /* [CP] Check Pods Manifest.lock */,
 				49DEF4FE25E6B41D00418D72 /* Sources */,
 				49DEF4FF25E6B41D00418D72 /* Frameworks */,
 				49DEF50025E6B41D00418D72 /* Resources */,
+				1C9B7B5D7E6640F9CD46D6E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,11 +337,119 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C9B7B5D7E6640F9CD46D6E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShawManApp-ShawManAppUITests/Pods-ShawManApp-ShawManAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShawManApp-ShawManAppUITests/Pods-ShawManApp-ShawManAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShawManApp-ShawManAppUITests/Pods-ShawManApp-ShawManAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61CACFD71CC2084594571679 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShawManApp-ShawManAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6084070254BA88AE63F4AE8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShawManApp/Pods-ShawManApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShawManApp/Pods-ShawManApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShawManApp/Pods-ShawManApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E32FAFCB59D63F193C9AED6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShawManAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB97108B67C5111806B6A59D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShawManApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		49DEF4DD25E6B41900418D72 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49DEF53325E6BA5900418D72 /* FormatedAddressResponse.swift in Sources */,
+				49DEF53825E6BAE600418D72 /* BaseVC.swift in Sources */,
+				49DEF52E25E6B53300418D72 /* APIManager.swift in Sources */,
+				49DEF54525E6BE3D00418D72 /* RestaurantDetailsByFilterResponse.swift in Sources */,
+				49DEF54A25E6C29F00418D72 /* SingleRestaurantDetailResponse.swift in Sources */,
 				49DEF4E925E6B41900418D72 /* ViewController.swift in Sources */,
 				49DEF4E525E6B41900418D72 /* AppDelegate.swift in Sources */,
 				49DEF4E725E6B41900418D72 /* SceneDelegate.swift in Sources */,
@@ -433,6 +625,7 @@
 		};
 		49DEF50C25E6B41D00418D72 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93F1EE826AF6EF1832A1480F /* Pods-ShawManApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +645,7 @@
 		};
 		49DEF50D25E6B41D00418D72 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CAEB1E702C71EDD537C0D3D /* Pods-ShawManApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,6 +665,7 @@
 		};
 		49DEF50F25E6B41D00418D72 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 530316434857810BA6D5BA27 /* Pods-ShawManAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +688,7 @@
 		};
 		49DEF51025E6B41D00418D72 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87E3E0BF43FB168A0723AC10 /* Pods-ShawManAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +711,7 @@
 		};
 		49DEF51225E6B41D00418D72 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1215801F5B63413DB3BD744B /* Pods-ShawManApp-ShawManAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +732,7 @@
 		};
 		49DEF51325E6B41D00418D72 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F3F3410DCB60DC4F05DB82B /* Pods-ShawManApp-ShawManAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
