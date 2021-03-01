@@ -10,6 +10,12 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>need to fetch current location of user</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>need to fetch current location of user</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>need to fetch current location of user</string>
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundlePackageType</key>
