@@ -17,8 +17,9 @@ class RestaurantListVC: BaseVC{
     var locationData: FormatedAddressResponse!
     var restaurantDetailData: RestaurantDetailsByFilterResponse!
     var restaurantList = [AllRestaurantDishes]()
+    var lastFetchCount = 0
+    var isFetchingData = false
     
-    var currentLatLong = (latitude: "", longitude: "")
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,11 +31,6 @@ class RestaurantListVC: BaseVC{
             locationManager.requestLocation()
         }
     }
-    
-    
-    
-    
-    
 }
 
 // MARK: TableView datasource/ delegate
@@ -44,12 +40,6 @@ extension RestaurantListVC: UITableViewDelegate, UITableViewDataSource{
         return restaurantList.count
     }
     
-    //RestaurantName
-    //Votes
-    //Cuisines
-    //
-    //RestaurantCity , LocationName | Distance
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = restaurantList[indexPath.row]
         let cell = restaurantTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! restroCell
@@ -58,20 +48,26 @@ extension RestaurantListVC: UITableViewDelegate, UITableViewDataSource{
         cell.restRating.text = "\(data.Votes ?? 0)"
         cell.restLocationDistance.text = "\(data.RestaurantCity ?? ""), \(data.LocationName ?? "") | \(getKmValue(meter: data.Distance))"
         cell.restImageView.image = UIImage(named: ["rest1","rest2","rest3","rest4","rest5"].randomElement()!)
-        
-        
         cell.contentMainView.addBorderWithRadiusAndShadow()
         
         return cell
     }
-    
-    
-    
-    //Utility
-    func getKmValue(meter:Double)->String{
-        return String(format: "%.2f Km", (meter / 1000))
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let TotalPage = self.restaurantDetailData.NoOfRestaurants.NoOfRestaurants ?? 0
+        let lastItem = self.restaurantList.count - 1
+        if indexPath.row == lastItem {
+            if self.lastFetchCount < TotalPage {
+                !isFetchingData ? self.getRestaurantDetailsByFilter() : nil
+            }
+        }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "RestaurantDetailVC") as! RestaurantDetailVC
+         vc.restaurantData = restaurantList[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 
@@ -116,36 +112,24 @@ extension RestaurantListVC{
     
     func getRestaurantDetailsByFilter(){
         self.showProgressIndicator()
+        isFetchingData = true
         let parameters: [String:String] = [
-            "StrLocLatitude":currentLatLong.latitude,
-            "StrLocLongitude":currentLatLong.longitude,
-            "StrLocCityName":self.locationData.CityName,
-            "IntLocOrderby":"1",
-            "IntLocNoOfRecords":"0"
+            "StrLocLatitude": currentLatLong.latitude,
+            "StrLocLongitude": currentLatLong.longitude,
+            "StrLocCityName": self.locationData.CityName,
+            "IntLocOrderby": "1",
+            "IntLocNoOfRecords": "\(self.lastFetchCount)"
         ]
         APIMananger.getRestaurantDetailsByFilter(parameters: parameters).responseDecodable(of: RestaurantDetailsByFilterResponse.self) { response in
             self.hideProgressIndicator()
+            self.isFetchingData = false
             if let data = response.value{
-                self.restaurantDetailData = data
-                self.restaurantList = data.AllRestaurantDishes
-                self.restaurantTableView.reloadData()
-            }else{
-                self.showAlert(title: "Error", message: "Something went wrong, please try later")
-            }
-        }
-    }
-    
-    func getSingleRestaurantDetails(){
-        self.showProgressIndicator()
-        let parameters: [String:String] = [
-            "StrLocLatitude":currentLatLong.latitude,
-            "StrLocLongitude":currentLatLong.longitude,
-            "IntLocRestaurantId":"639161"
-        ]
-        APIMananger.getSingleRestaurantDetails(parameters: parameters).responseDecodable(of: SingleRestaurantDetailResponse.self) { response in
-            self.hideProgressIndicator()
-            if let data = response.value{
-                
+                if let restList = data.AllRestaurantDishes{
+                    self.restaurantDetailData = data
+                    self.restaurantList.append(contentsOf: restList)
+                    self.lastFetchCount = self.restaurantList.count
+                    self.restaurantTableView.reloadData()
+                }
             }else{
                 self.showAlert(title: "Error", message: "Something went wrong, please try later")
             }
@@ -161,4 +145,8 @@ class restroCell: UITableViewCell {
     @IBOutlet weak var restCuisines: UILabel!
     @IBOutlet weak var restRating: UILabel!
     @IBOutlet weak var restLocationDistance: UILabel!
+}
+
+func getKmValue(meter:Double)->String{
+    return String(format: "%.2f Km", (meter / 1000))
 }

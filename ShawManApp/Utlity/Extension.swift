@@ -25,14 +25,13 @@ extension UIView {
         layer.borderColor = brColor.cgColor
     }
     
-    func addBorderWithRadiusAndShadow(brWidth: CGFloat = 0.5, brColor: UIColor = .black, brRadius:CGFloat = 5) -> Void {
-        layer.cornerRadius = brRadius
-        
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: -1, height: 1)
+    func addBorderWithRadiusAndShadow() -> Void {
+            layer.cornerRadius = 20.0
         layer.masksToBounds = false
-        layer.shadowRadius = brRadius
-        layer.shadowOpacity = 0.7
+            layer.shadowColor = UIColor.gray.cgColor
+            layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+            layer.shadowRadius = 5.0
+            layer.shadowOpacity = 0.7
     }
     
 }

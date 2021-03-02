@@ -35,8 +35,8 @@ struct SingleRestaurantDetailResponse :Codable {
     var HappyHoursToTime: String!
     var MenuImages: [MenuImages]!
     var RestaurantDishes: [RestaurantDishes]!
-    
-    
+    var Facilities: [Facilities]!
+    var Cuisines: [Cuisines]!
     var CityId: Int!
     var CityName: String!
     var MinOrder: String!
@@ -45,8 +45,6 @@ struct SingleRestaurantDetailResponse :Codable {
     var HomeDeliveryDistRange: Int!
     
     enum CodingKeys : String, CodingKey {
-        
-        
         case RestaurantID = "RestaurantID"
         case RestaurantName = "RestaurantName"
         case RestaurantAddress = "RestaurantAddress"
@@ -75,6 +73,11 @@ struct SingleRestaurantDetailResponse :Codable {
         case MenuImages = "MenuImages"
         
         
+        case RestaurantDishes = "RestaurantDishes"
+        case Cuisines = "Cuisines"
+        case Facilities = "Facilities"
+        
+        
         case CityId = "CityId"
         case CityName = "CityName"
         case MinOrder = "MinOrder"
@@ -89,6 +92,23 @@ struct MenuImages :Codable {
     
     enum CodingKeys : String, CodingKey {
         case MenuImageName = "MenuImageName"
+    }
+}
+
+struct Cuisines :Codable {
+    var Cuisine : String!
+    
+    enum CodingKeys : String, CodingKey {
+        case Cuisine = "Cuisine"
+    }
+}
+
+struct Facilities :Codable {
+    var Facilities : String!
+    var Values : Bool!
+    enum CodingKeys : String, CodingKey {
+        case Facilities = "Facilities"
+        case Values = "Values"
     }
 }
 
@@ -121,6 +141,8 @@ struct RestaurantDishes :Codable {
         case Rate = "Rate"
     }
 }
+
+
 
 
 

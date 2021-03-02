@@ -8,6 +8,9 @@
 import Foundation
 import Alamofire
 
+
+var currentLatLong = (latitude: "", longitude: "")
+
 struct URLS{
     public static let GET_ADDRESS = "https://fmtest.dishco.com/shawmanservices/api/GetFormatedAddress/FunPubRetrieveFormatedAddress"
     
@@ -36,7 +39,4 @@ public class APIMananger: NSObject {
         
         return AF.request(URLS.GET_REST_DETAILS,method:.get,parameters: parameters, headers: headers)
     }
-    
-    
-
 }
