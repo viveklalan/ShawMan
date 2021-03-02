@@ -27,10 +27,6 @@ struct NoOfRestaurants : Codable {
     }
 }
 
-//{"RestaurantId":7,"RestaurantName":"Hakkasan","RestaurantDishId":124,"RestaurantDishName":"Crispy Duck Salad","LocationName":"Linking Road","RestaurantCity":"Mumbai","Distance":3391.4862938954025,"Votes":5,"DishRank":1,"Latitude":"19.0605773","Longitude":"72.8346537","DishImage":"DIf01ed28aa2a59d5d4956538b2d3a9788","PromoFlag":0,"FmUsers":0,"NoOfCoupons":0,"TotalPledge":0,"DishType":1,"Friends":0,"DishSequence":0,"Cuisines":"Chinese Authentic","AccountId":1,"ChainOfRest":0}
-
-
-
 struct AllRestaurantDishes :Codable {
     var RestaurantId : Int!
     var RestaurantName : String!

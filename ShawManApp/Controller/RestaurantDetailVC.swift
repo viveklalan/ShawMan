@@ -138,6 +138,8 @@ extension RestaurantDetailVC: UITableViewDelegate, UITableViewDataSource{
     }
 }
 
+// MARK: CollectionView datasource/ delegate
+
 extension RestaurantDetailVC: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == cuisinesCollectionView {
@@ -166,8 +168,6 @@ extension RestaurantDetailVC: UICollectionViewDelegate, UICollectionViewDataSour
             return cell
         }
     }
-    
-    
 }
 
 class DishCell: UITableViewCell {
@@ -179,7 +179,6 @@ class DishCell: UITableViewCell {
 }
 
 class pointCell: UICollectionViewCell {
-    
     @IBOutlet weak var nameMainView: UIView!
     @IBOutlet weak var name: UILabel!
 }

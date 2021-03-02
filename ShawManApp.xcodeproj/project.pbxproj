@@ -105,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		490759E625EEA7F000F22317 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				49DEF4EA25E6B41900418D72 /* Main.storyboard */,
+				49DEF4EF25E6B41C00418D72 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
 		49DEF4D825E6B41900418D72 = {
 			isa = PBXGroup;
 			children = (
@@ -135,9 +144,8 @@
 				49DEF52C25E6B52000418D72 /* Model */,
 				49DEF52825E6B51000418D72 /* Utlity */,
 				49DEF52125E6B50600418D72 /* Controller */,
-				49DEF4EA25E6B41900418D72 /* Main.storyboard */,
+				490759E625EEA7F000F22317 /* StoryBoard */,
 				49DEF4ED25E6B41C00418D72 /* Assets.xcassets */,
-				49DEF4EF25E6B41C00418D72 /* LaunchScreen.storyboard */,
 				49DEF4F225E6B41C00418D72 /* Info.plist */,
 			);
 			path = ShawManApp;

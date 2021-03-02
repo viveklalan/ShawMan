@@ -71,13 +71,9 @@ struct SingleRestaurantDetailResponse :Codable {
         case HappyHoursFromTime = "HappyHoursFromTime"
         case HappyHoursToTime = "HappyHoursToTime"
         case MenuImages = "MenuImages"
-        
-        
         case RestaurantDishes = "RestaurantDishes"
         case Cuisines = "Cuisines"
-        case Facilities = "Facilities"
-        
-        
+        case Facilities = "Facilities"        
         case CityId = "CityId"
         case CityName = "CityName"
         case MinOrder = "MinOrder"

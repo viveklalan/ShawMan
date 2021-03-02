@@ -65,7 +65,7 @@ extension RestaurantListVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "RestaurantDetailVC") as! RestaurantDetailVC
-         vc.restaurantData = restaurantList[indexPath.row]
+        vc.restaurantData = restaurantList[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -78,7 +78,7 @@ extension RestaurantListVC: CLLocationManagerDelegate{
             print("latitude = \(location.coordinate.latitude)")
             print("longitude = \(location.coordinate.longitude)")
             currentLatLong = ("\(location.coordinate.latitude)", "\(location.coordinate.longitude)")
-//            currentLatLong = ("19.1105765", "73.0174654")
+            //            currentLatLong = ("19.1105765", "73.0174654")
             getFormatedAddress()
         }
     }
@@ -147,6 +147,3 @@ class restroCell: UITableViewCell {
     @IBOutlet weak var restLocationDistance: UILabel!
 }
 
-func getKmValue(meter:Double)->String{
-    return String(format: "%.2f Km", (meter / 1000))
-}
