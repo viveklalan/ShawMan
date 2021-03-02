@@ -67,7 +67,7 @@ class RestaurantDetailVC: BaseVC {
         restCityNameDistance.text = "\(data.CityName ?? ""), \(data.Location ?? "") | \(getKmValue(meter: data.Distance ?? 0.0))"
         restCuisines.text = getCuisines(data:data.Cuisines ?? [Cuisines]())
         restVote.text = "\(data.Rating ?? 0)"
-        restRate.text = data.OpeningsHours
+        restRate.text = String(data.OpeningsHours.split(separator: ",")[0])
         
         restContactName.text = data.RestaurantName
         restContactLocation.text = "\(data.CityName ?? ""), \(data.Location ?? "") | \(getKmValue(meter: data.Distance))"
