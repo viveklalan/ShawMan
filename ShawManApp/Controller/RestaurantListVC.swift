@@ -11,7 +11,7 @@ import CoreLocation
 
 class RestaurantListVC: BaseVC{
     
-    @IBOutlet weak var restaurantCollectionView: UICollectionView!
+    @IBOutlet weak var restaurantTableView: UITableView!
     
     var locationManager: CLLocationManager!
     var locationData: FormatedAddressResponse!
@@ -38,16 +38,42 @@ class RestaurantListVC: BaseVC{
 }
 
 // MARK: TableView datasource/ delegate
-extension RestaurantListVC: UICollectionViewDelegate, UICollectionViewDataSource{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+extension RestaurantListVC: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return restaurantList.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+    //RestaurantName
+    //Votes
+    //Cuisines
+    //
+    //RestaurantCity , LocationName | Distance
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let data = restaurantList[indexPath.row]
+        let cell = restaurantTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! restroCell
+        cell.restName.text = data.RestaurantName ?? ""
+        cell.restCuisines.text = data.Cuisines ?? ""
+        cell.restRating.text = "\(data.Votes ?? 0)"
+        cell.restLocationDistance.text = "\(data.RestaurantCity ?? ""), \(data.LocationName ?? "") | \(getKmValue(meter: data.Distance))"
+        cell.restImageView.image = UIImage(named: ["rest1","rest2","rest3","rest4","rest5"].randomElement()!)
+        
+        
+        cell.contentMainView.addBorderWithRadiusAndShadow()
+        
+        return cell
+    }
+    
+    
+    
+    //Utility
+    func getKmValue(meter:Double)->String{
+        return String(format: "%.2f Km", (meter / 1000))
     }
     
 }
+
 
 // MARK: Corelocation delegate
 extension RestaurantListVC: CLLocationManagerDelegate{
@@ -102,7 +128,7 @@ extension RestaurantListVC{
             if let data = response.value{
                 self.restaurantDetailData = data
                 self.restaurantList = data.AllRestaurantDishes
-                self.restaurantCollectionView.reloadData()
+                self.restaurantTableView.reloadData()
             }else{
                 self.showAlert(title: "Error", message: "Something went wrong, please try later")
             }
@@ -125,4 +151,14 @@ extension RestaurantListVC{
             }
         }
     }
+}
+
+
+class restroCell: UITableViewCell {
+    @IBOutlet weak var contentMainView: UIView!
+    @IBOutlet weak var restImageView: UIImageView!
+    @IBOutlet weak var restName: UILabel!
+    @IBOutlet weak var restCuisines: UILabel!
+    @IBOutlet weak var restRating: UILabel!
+    @IBOutlet weak var restLocationDistance: UILabel!
 }

@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		05D2A154FA33778D6EB484A8 /* Pods_ShawManApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD45328F5C5B5F8AA4152FF /* Pods_ShawManApp.framework */; };
 		253F6145A1C077212ADE418B /* Pods_ShawManAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB02F71C4B8FBBA8B8A9415 /* Pods_ShawManAppTests.framework */; };
+		49A22CFF25EE3F19006BA5D1 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A22CFE25EE3F19006BA5D1 /* Extension.swift */; };
+		49A22D0725EE4781006BA5D1 /* RestaurantDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A22D0625EE4781006BA5D1 /* RestaurantDetailVC.swift */; };
 		49DEF4E525E6B41900418D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DEF4E425E6B41900418D72 /* AppDelegate.swift */; };
 		49DEF4E725E6B41900418D72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DEF4E625E6B41900418D72 /* SceneDelegate.swift */; };
-		49DEF4E925E6B41900418D72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DEF4E825E6B41900418D72 /* ViewController.swift */; };
+		49DEF4E925E6B41900418D72 /* RestaurantListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DEF4E825E6B41900418D72 /* RestaurantListVC.swift */; };
 		49DEF4EC25E6B41900418D72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DEF4EA25E6B41900418D72 /* Main.storyboard */; };
 		49DEF4EE25E6B41C00418D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49DEF4ED25E6B41C00418D72 /* Assets.xcassets */; };
 		49DEF4F125E6B41C00418D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DEF4EF25E6B41C00418D72 /* LaunchScreen.storyboard */; };
@@ -47,10 +49,12 @@
 		1215801F5B63413DB3BD744B /* Pods-ShawManApp-ShawManAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShawManApp-ShawManAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ShawManApp-ShawManAppUITests/Pods-ShawManApp-ShawManAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3CAEB1E702C71EDD537C0D3D /* Pods-ShawManApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShawManApp.release.xcconfig"; path = "Target Support Files/Pods-ShawManApp/Pods-ShawManApp.release.xcconfig"; sourceTree = "<group>"; };
 		472A80B781658AF9F9539EBA /* Pods_ShawManApp_ShawManAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShawManApp_ShawManAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A22CFE25EE3F19006BA5D1 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		49A22D0625EE4781006BA5D1 /* RestaurantDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailVC.swift; sourceTree = "<group>"; };
 		49DEF4E125E6B41900418D72 /* ShawManApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShawManApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DEF4E425E6B41900418D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49DEF4E625E6B41900418D72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		49DEF4E825E6B41900418D72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49DEF4E825E6B41900418D72 /* RestaurantListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListVC.swift; sourceTree = "<group>"; };
 		49DEF4EB25E6B41900418D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49DEF4ED25E6B41C00418D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49DEF4F025E6B41C00418D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,8 +132,6 @@
 			children = (
 				49DEF4E425E6B41900418D72 /* AppDelegate.swift */,
 				49DEF4E625E6B41900418D72 /* SceneDelegate.swift */,
-				49DEF4E825E6B41900418D72 /* ViewController.swift */,
-				49DEF53725E6BAE500418D72 /* BaseVC.swift */,
 				49DEF52C25E6B52000418D72 /* Model */,
 				49DEF52825E6B51000418D72 /* Utlity */,
 				49DEF52125E6B50600418D72 /* Controller */,
@@ -162,6 +164,9 @@
 		49DEF52125E6B50600418D72 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				49DEF4E825E6B41900418D72 /* RestaurantListVC.swift */,
+				49A22D0625EE4781006BA5D1 /* RestaurantDetailVC.swift */,
+				49DEF53725E6BAE500418D72 /* BaseVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				49DEF52D25E6B53300418D72 /* APIManager.swift */,
+				49A22CFE25EE3F19006BA5D1 /* Extension.swift */,
 			);
 			path = Utlity;
 			sourceTree = "<group>";
@@ -445,13 +451,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A22CFF25EE3F19006BA5D1 /* Extension.swift in Sources */,
 				49DEF53325E6BA5900418D72 /* FormatedAddressResponse.swift in Sources */,
 				49DEF53825E6BAE600418D72 /* BaseVC.swift in Sources */,
 				49DEF52E25E6B53300418D72 /* APIManager.swift in Sources */,
 				49DEF54525E6BE3D00418D72 /* RestaurantDetailsByFilterResponse.swift in Sources */,
 				49DEF54A25E6C29F00418D72 /* SingleRestaurantDetailResponse.swift in Sources */,
-				49DEF4E925E6B41900418D72 /* ViewController.swift in Sources */,
+				49DEF4E925E6B41900418D72 /* RestaurantListVC.swift in Sources */,
 				49DEF4E525E6B41900418D72 /* AppDelegate.swift in Sources */,
+				49A22D0725EE4781006BA5D1 /* RestaurantDetailVC.swift in Sources */,
 				49DEF4E725E6B41900418D72 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
